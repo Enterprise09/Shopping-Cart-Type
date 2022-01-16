@@ -66,4 +66,4 @@
 
 - Show shopping cart use by Drawer
 
-    <img src="https://user-images.githubusercontent.com/73864148/149665835-be6deacc-22da-4a5e-b2d5-563c2aeda01f.png" width="500">
+    <img src="https://user-images.githubusercontent.com/73864148/149665835-be6deacc-22da-4a5e-b2d5-563c2aeda01f.png" width="700">
