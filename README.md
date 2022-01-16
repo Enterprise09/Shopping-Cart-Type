@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# Simple Fake Shopping mall
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div>
+    <img src="https://img.shields.io/badge/Node.js-14.15.1-brightgreen?logo=node.js">
+    <img src="https://img.shields.io/badge/npm-6.14.8-CB3837?logo=npm">
+    <img src="https://img.shields.io/badge/React-17.0.2-61DAFB?logo=react">
+    <img src="https://img.shields.io/badge/TS-4.5.4-3178C6?logo=typescript">
+    <img src="https://img.shields.io/badge/Lincense-MIT-blue">
+</div>
 
-## Available Scripts
+> Getting Started with Create React App<br />
+> with `--template typescript`<br />
+> study with <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ">freeCodeCamp.org</a>
 
-In the project directory, you can run:
+## Start project
 
-### `npm start`
+- Download
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  1. .zip file => click `download to .zip` button
+  2. Using Git
+     ```shell
+         git clone https://github.com/Enterprise09/Shopping-Cart-Type.git
+         cd [clone directory path]   # move to clone directory
+         npm install
+         npm start
+     ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Dependency
 
-### `npm test`
+- package.json
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ```json
+  "dependencies": {
+      "@material-ui/core": "^4.12.3",
+      "@material-ui/icons": "^4.11.2",
+      "@testing-library/jest-dom": "^5.16.1",
+      "@testing-library/react": "^12.1.2",
+      "@testing-library/user-event": "^13.5.0",
+      "@types/jest": "^27.4.0",
+      "@types/node": "^16.11.19",
+      "@types/react": "^17.0.38",
+      "@types/react-dom": "^17.0.11",
+      "@types/styled-components": "^5.1.20",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-query": "^3.34.8",
+      "react-scripts": "5.0.0",
+      "styled-components": "^5.3.3",
+      "typescript": "^4.5.4",
+      "web-vitals": "^2.1.3"
+  },
+  ```
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Show shopping items - get fake data from fakestore api
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```js
+  // App.tsx
+  const getProducts = async (): Promise<CartItemType[]> => {
+    return await (await fetch("https://fakestoreapi.com/products")).json();
+  };
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Add & remove items to shopping cart
 
-### `npm run eject`
+- Show shopping cart use by Drawer
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    <img src="https://user-images.githubusercontent.com/73864148/149665835-be6deacc-22da-4a5e-b2d5-563c2aeda01f.png" width="500">
